@@ -22,7 +22,7 @@ BunnyLogger is a BashBunny payload that uses PowerShell to log keystrokes
     - sends logs hourly, regardless of system time
 
 ## Resources:
-- [YouTube Video]()
+- [YouTube Video](https://www.youtube.com/watch?v=z8KD9zU50xc)
 - [YouTube Channel](https://youtube.com/cosmodiumcs)
 - [Website](https://cosmodiumcs.com)
 
