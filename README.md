@@ -11,6 +11,9 @@ __________                           .____
         \/           \/     \/\/             \/    /_____//_____/      \/         
 ```
 
+## Update:
+**An New Version of This Payload Is Available [HERE](https://github.com/CosmodiumCS/BunnyKeyhook)**
+
 ## Overview:
 ```
 BunnyLogger is a BashBunny payload that uses PowerShell to log keystrokes
